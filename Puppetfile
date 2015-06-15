@@ -5,6 +5,36 @@ forge "http://forge.puppetlabs.com"
 mod "puppetlabs/apache"
 mod "puppetlabs/ntp"
 
+mod "puppet/jenkins_job_builder
+puppetlabs/firewall
+puppetlabs/haproxy
+puppetlabs/java
+puppetlabs/lvm
+puppetlabs/mysql
+puppetlabs/postgresql
+puppetlabs/stdlib
+puppetlabs/vcsrepo
+puppetlabs/xinetd
+elasticsearch/elasticsearch
+elasticsearch/logstash
+ghoneycutt/dnsclient
+ghoneycutt/pam # handles limits
+camptocamp/kmod
+camptocamp/openssl
+jenkinsci/puppet-jenkins # rtyler/jenkins
+maestrodev/wget
+mwhahaha/pgpool
+petems/swap_file
+rodjek/logrotate
+saz/memcached
+saz/rsyslog
+saz/sudo
+stankevich/python
+thias/sysctl
+thias/vsftpd
+trlinkin/nsswitch
+zack/r10k
+
 # mod '<module>'[, '<version>']
 #   :git =>
 #   :path =>
