@@ -2,38 +2,39 @@ forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
 # mod "<user>/<module>"[, '<version>']
-mod "puppetlabs/apache"
-mod "puppetlabs/ntp"
 
-mod "puppet/jenkins_job_builder
-puppetlabs/firewall
-puppetlabs/haproxy
-puppetlabs/java
-puppetlabs/lvm
-puppetlabs/mysql
-puppetlabs/postgresql
-puppetlabs/stdlib
-puppetlabs/vcsrepo
-puppetlabs/xinetd
-elasticsearch/elasticsearch
-elasticsearch/logstash
-ghoneycutt/dnsclient
-ghoneycutt/pam # handles limits
-camptocamp/kmod
-camptocamp/openssl
-jenkinsci/puppet-jenkins # rtyler/jenkins
-maestrodev/wget
-mwhahaha/pgpool
-petems/swap_file
-rodjek/logrotate
-saz/memcached
-saz/rsyslog
-saz/sudo
-stankevich/python
-thias/sysctl
-thias/vsftpd
-trlinkin/nsswitch
-zack/r10k
+mod "puppet/jenkins_job_builder"
+mod "puppetlabs/apache"
+mod "puppetlabs/firewall"
+mod "puppetlabs/haproxy"
+mod "puppetlabs/inifile"
+mod "puppetlabs/java"
+mod "puppetlabs/lvm"
+mod "puppetlabs/mysql"
+mod "puppetlabs/ntp"
+mod "puppetlabs/postgresql"
+mod "puppetlabs/stdlib"
+mod "puppetlabs/vcsrepo"
+mod "puppetlabs/xinetd"
+mod "elasticsearch/elasticsearch"
+mod "elasticsearch/logstash"
+mod "ghoneycutt/dnsclient"
+mod "ghoneycutt/pam" # handles limits
+mod "camptocamp/kmod"
+mod "camptocamp/openssl"
+mod "jenkinsci/puppet-jenkins" # rtyler/jenkins
+mod "maestrodev/wget"
+mod "mwhahaha/pgpool"
+mod "petems/swap_file"
+mod "rodjek/logrotate"
+mod "saz/memcached"
+mod "saz/rsyslog"
+mod "saz/sudo"
+mod "stankevich/python"
+mod "thias/sysctl"
+mod "thias/vsftpd"
+mod "trlinkin/nsswitch"
+mod "zack/r10k"
 
 # mod '<module>'[, '<version>']
 #   :git =>
