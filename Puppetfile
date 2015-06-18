@@ -19,10 +19,12 @@ mod "puppetlabs/xinetd"
 mod "elasticsearch/elasticsearch"
 mod "elasticsearch/logstash"
 mod "ghoneycutt/dnsclient"
-mod "ghoneycutt/pam" # handles limits
+mod "ghoneycutt/pam"
+# handles limits
 mod "camptocamp/kmod"
 mod "camptocamp/openssl"
-mod "jenkinsci/puppet-jenkins" # rtyler/jenkins
+mod "jenkinsci/puppet-jenkins"
+# rtyler/jenkins
 mod "maestrodev/wget"
 mod "mwhahaha/pgpool"
 mod "petems/swap_file"
@@ -43,11 +45,11 @@ mod "zack/r10k"
 #   :github_tarball =>
 
 # Modules from Github using various references
-mod 'notifyme',
-  :git => 'git://github.com/glarizza/puppet-notifyme',
-  :ref => '50c01703b2e3e352520a9a2271ea4947fe17a51f'
+#mod 'notifyme',
+#  :git => 'git://github.com/glarizza/puppet-notifyme',
+#  :ref => '50c01703b2e3e352520a9a2271ea4947fe17a51f'
 
-mod 'profiles',
-  :git => 'git://github.com/glarizza/puppet-profiles',
-  :ref => '3611ae4253ff01762f9bda1d93620edf8f9a3b22'
+#mod 'profiles',
+#  :git => 'git://github.com/glarizza/puppet-profiles',
+#  :ref => '3611ae4253ff01762f9bda1d93620edf8f9a3b22'
 
