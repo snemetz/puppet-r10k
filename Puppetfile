@@ -23,7 +23,7 @@ mod "ghoneycutt/pam"
 # handles limits
 mod "camptocamp/kmod"
 mod "camptocamp/openssl"
-#mod "jenkinsci/puppet-jenkins"
+# New repo, but not changed in forge yet. mod "jenkinsci/puppet-jenkins"
 mod 'rtyler/jenkins'
 mod "maestrodev/wget"
 mod "mwhahaha/pgpool"
