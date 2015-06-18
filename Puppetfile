@@ -23,8 +23,8 @@ mod "ghoneycutt/pam"
 # handles limits
 mod "camptocamp/kmod"
 mod "camptocamp/openssl"
-mod "jenkinsci/puppet-jenkins"
-# rtyler/jenkins
+#mod "jenkinsci/puppet-jenkins"
+mod 'rtyler/jenkins'
 mod "maestrodev/wget"
 mod "mwhahaha/pgpool"
 mod "petems/swap_file"
