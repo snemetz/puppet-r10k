@@ -4,7 +4,7 @@ forge "http://forge.puppetlabs.com"
 # mod "<user>/<module>"[, '<version>']
 
 mod "puppetlabs/apache"
-mod "puppetlabs/apt"
+mod "puppetlabs/apt", '2.0.0'
 mod "puppetlabs/concat"
 mod "puppetlabs/firewall"
 mod "puppetlabs/gcc"
