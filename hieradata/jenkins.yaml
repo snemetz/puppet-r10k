@@ -1,3 +1,227 @@
 ---
 
 jenkins::configure_firewall: true
+
+jenkins::plugin_hash:
+  all-changes:
+    version: 1.3
+  analysis-collector:
+    version: 1.43
+  analysis-core:
+    version: 1.72
+  AnchorChain:
+    version: 1.0
+  antisamy-markup-formatter:
+    version: 1.3
+  ant:
+    version: 1.2
+  any-buildstep:
+    version: 0.1
+  beaker-builder:
+    version: 1.8
+  build-environment:
+    version: 1.5
+  build-failure-analyzer:
+    version: 1.13.0
+  buildgraph-view:
+    version: 1.1.1
+  build-history-metrics-plugin:
+    version: 1.2
+  build-metrics:
+    version: 1.0
+  build-pipeline-plugin:
+    version: 1.4.7
+  build-timeout:
+    version: 1.14.1
+  buildresult-trigger:
+    version: 0.17
+  buildtriggerbadge:
+    version: 2.0
+  bulk-builder:
+    version: 1.5
+  claim:
+    version: 2.7
+  cluster-stats:
+    version: 0.4.6
+  computer-queue-plugin:
+    version: 1.4
+  conditional-buildstep:
+    version: 1.3.3
+  configurationslicing:
+    version: 1.41
+  conditional-buildstep:
+    version: 2.26
+  confluence-publisher:
+    version: 1.8
+  copyartifact:
+    version: 1.35.1
+  create-fingerprint:
+    version: 1.2
+  createjobadvanced:
+    version: 1.8
+  credentials:
+    version: 1.22
+  custom-job-icon:
+    version: 0.2
+  cvs:
+    version: 2.11
+  dashboard-view:
+    version: 2.9.5
+  delivery-pipeline-plugin:
+    version: 0.9.4
+  dependency-check-jenkins-plugin:
+    version: 1.2.11.1
+  depgraph-view:
+    version: 0.11
+  deployment-notification:
+    version: 1.2
+  deployment-sphere:
+    version: 0.1.104
+  description-setter:
+    version: 1.10
+  disk-usage:
+    version: 0.25
+  doclinks:
+    version: 0.6
+  downstream-buildview:
+    version: 1.9
+  email-ext:
+    version: 2.40.5
+  emailext-template:
+    version: 0.4
+  environment-dashboard:
+    version: 1.1.3
+  environment-labels-setter:
+    version: 1.1
+  external-monitor-job:
+    version: 1.4
+  flexible-publish:
+    version: 0.15.2
+  fstrigger:
+    version: 0.39
+  git-client:
+    version: 1.17.1
+  github-api:
+    version: 1.68
+  github:
+    version: 1.11.3
+  git:
+    version: 2.3.5
+  git-notes:
+    version: 0.0.
+  global-build-stats:
+    version: 1.3
+  javadoc:
+    version: 1.3
+  jobConfigHistory:
+    version: 2.11
+  jquery:
+    version: 1.11.2-0
+  jquery-ui:
+    version: 1.0.2
+  junit:
+    version: 1.6
+  label-linked-jobs:
+    version: 4.0.2
+  label-verifier:
+    version: 1.1
+  ldap:
+    version: 1.11
+  mailer:
+    version: 1.15
+  matrix-auth:
+    version: 1.2
+  matrix-project:
+    version: 1.6
+  maven-plugin:
+    version: 2.10
+  modernstatus:
+    version: 1.2
+  monitoring:
+    version: 1.56.0
+  mttr:
+    version: 1.1
+  multi-branch-project-plugin:
+    version: 0.2.2
+  nested-view:
+    version: 1.14
+  next-executions:
+    version: 1.0.10
+  nodelabelparamenter:
+    version: 1.5.1
+  packer:
+    version: 1.2
+  pam-auth:
+    version: 1.2
+  parameterized-trigger:
+    version: 2.27
+  platformlabeler:
+    version: 1.1
+  plugin-usage-plugin:
+    version: 0.3
+  project-build-times:
+    version: 1.2.1
+  project-description-setter:
+    version: 1.1
+  project-health-report:
+    version: 1.2
+  project-stats-plugin:
+    version: 0.4
+  publish-over-ssh:
+    version: 1.13
+  puppet:
+    version: 1.0
+  rebuild:
+    version: 1.24
+  rich-text-publisher-plugin:
+    version: 1.3
+  role-strategy:
+    version: 2.2.0
+  ruby-runtime:
+    version: 0.12
+  run-condition:
+    version: 1.0
+  scm-api:
+    version: 0.2
+  script-security:
+    version: 1.14
+  show-build-parameters:
+    version: 1.0
+  sidebar-link:
+    version: 1.7
+  sloccount:
+    version: 1.20
+  ssh-agent:
+    version: 1.7
+  ssh-credentials:
+    version: 1.11
+  ssh:
+    version: 2.4
+  ssh-slaves:
+    version: 1.9
+  status-view:
+    version: 1.0
+  subversion:
+    version: 1.54
+  systemloadaverage-monitor:
+    version: 1.2
+  template-project:
+    version: 1.4.2
+  test-results-analyzer:
+    version: 0.2.0
+  test-stability:
+    version: 1.0
+  timestamper:
+    version: 1.6.2
+  token-macro:
+    version: 1.10
+  translation:
+    version: 1.10
+  validating-string-parameter:
+    version: 2.3
+  view-job-filters:
+    version: 1.26
+  violations:
+    version: 0.7.11
+  warnings:
+    version: 4.48
