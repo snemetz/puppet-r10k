@@ -49,8 +49,6 @@ jenkins::plugin_hash:
     version: 1.3.3
   configurationslicing:
     version: 1.41
-  conditional-buildstep:
-    version: 2.26
   confluence-publisher:
     version: 1.8
   copyartifact:
