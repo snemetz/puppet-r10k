@@ -14,7 +14,7 @@ git checkout $puppet_env
 sed -i "s/$puppet_env_src/$puppet_env/g" README.txt
 sed -i "s/$puppet_env_src/$puppet_env/g" manifests/README.txt
 sed -i "s/$puppet_env_src/$puppet_env/g" hieradata/README.txt
-git rm *.pp hiera.yaml
+git rm *.pp *.sh hiera.yaml
 git add --all
 git commit -m "Initial creation of new puppet environment: $puppet_env"
 # Look for git command to do this
