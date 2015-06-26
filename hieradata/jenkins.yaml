@@ -3,6 +3,12 @@
 jenkins::configure_firewall: true
 
 jenkins::plugin_hash:
+  cvs:
+    enabled: false
+  subversion:
+    enabled: false
+  windows-slaves:
+    enabled: false
   all-changes:
     version: 1.3
   analysis-collector:
