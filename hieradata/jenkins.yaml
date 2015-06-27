@@ -95,10 +95,10 @@ jenkins::plugin_hash:
     version: 0.4
     config_filename: "org.jenkinsci.plugins.emailext_template.ExtendedEmailTemplatePublisher.xml"
     config_content: |
-<?xml version='1.0' encoding='UTF-8'?>
-<org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl plugin="emailext-template@0.4">
-  <templates>
-    <org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+      <?xml version='1.0' encoding='UTF-8'?>
+      <org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl plugin="emailext-template@0.4">
+      <templates>
+      <org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
       <id>emailext-template-1435433763855</id>
       <name>Puppet Workflow</name>
       <description>Puppet Workflow Notification-</description>
@@ -132,9 +132,9 @@ jenkins::plugin_hash:
         <saveOutput>false</saveOutput>
         <disabled>false</disabled>
       </publisher>
-    </org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
-  </templates>
-</org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl>
+      </org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+      </templates>
+      </org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl>
 
   environment-dashboard:
     version: 1.1.3
