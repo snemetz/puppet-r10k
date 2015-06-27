@@ -100,7 +100,7 @@ jenkins::plugin_hash:
   <templates>
     <org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
       <id>emailext-template-1435433763855</id>
-      <name>Puppet</name>
+      <name>Puppet Workflow</name>
       <description>Puppet Workflow Notification-</description>
       <publisher plugin="email-ext@2.40.5">
         <recipientList>$DEFAULT_RECIPIENTS</recipientList>
@@ -243,12 +243,12 @@ jenkins::plugin_hash:
   <links>
     <hudson.plugins.sidebar__link.LinkAction>
       <url>https://docs.eng.fireeye.com/</url>
-      <text>Confluence Eng-</text>
+      <text>Confluence Eng root</text>
       <icon></icon>
     </hudson.plugins.sidebar__link.LinkAction>
     <hudson.plugins.sidebar__link.LinkAction>
       <url>https://jira.eng.fireeye.com/</url>
-      <text>Jira Eng-</text>
+      <text>Jira Eng root</text>
       <icon></icon>
     </hudson.plugins.sidebar__link.LinkAction>
   </links>
