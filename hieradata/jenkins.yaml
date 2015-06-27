@@ -93,6 +93,7 @@ jenkins::plugin_hash:
     version: 2.40.5
   emailext-template:
     version: 0.4
+    manage_config: false
     config_filename: "org.jenkinsci.plugins.emailext_template.ExtendedEmailTemplatePublisher.xml"
     config_content: |
       <?xml version='1.0' encoding='UTF-8'?>
@@ -236,6 +237,7 @@ jenkins::plugin_hash:
     version: 1.0
   sidebar-link:
     version: 1.7
+    manage_config: false
     config_filename: "sidebar-link.xml"
     config_content: |
       <?xml version='1.0' encoding='UTF-8'?>
