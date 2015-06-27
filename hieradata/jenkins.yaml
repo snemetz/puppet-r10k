@@ -93,6 +93,49 @@ jenkins::plugin_hash:
     version: 2.40.5
   emailext-template:
     version: 0.4
+    config_filename: "org.jenkinsci.plugins.emailext_template.ExtendedEmailTemplatePublisher.xml"
+    config_content: |
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl plugin="emailext-template@0.4">
+  <templates>
+    <org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+      <id>emailext-template-1435433763855</id>
+      <name>Puppet</name>
+      <description>Puppet Workflow Notification-</description>
+      <publisher plugin="email-ext@2.40.5">
+        <recipientList>$DEFAULT_RECIPIENTS</recipientList>
+        <configuredTriggers>
+          <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+            <email>
+              <recipientList></recipientList>
+              <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+              <body>$PROJECT_DEFAULT_CONTENT</body>
+              <recipientProviders>
+                <hudson.plugins.emailext.plugins.recipients.DevelopersRecipientProvider/>
+              </recipientProviders>
+              <attachmentsPattern></attachmentsPattern>
+              <attachBuildLog>false</attachBuildLog>
+              <compressBuildLog>false</compressBuildLog>
+              <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+              <contentType>project</contentType>
+            </email>
+          </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+        </configuredTriggers>
+        <contentType>default</contentType>
+        <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+        <defaultContent>$DEFAULT_CONTENT</defaultContent>
+        <attachmentsPattern></attachmentsPattern>
+        <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+        <attachBuildLog>false</attachBuildLog>
+        <compressBuildLog>false</compressBuildLog>
+        <replyTo>$DEFAULT_REPLYTO</replyTo>
+        <saveOutput>false</saveOutput>
+        <disabled>false</disabled>
+      </publisher>
+    </org.jenkinsci.plugins.emailext__template.ExtendedEmailPublisherTemplate>
+  </templates>
+</org.jenkinsci.plugins.emailext__template.ExtendedEmailTemplatePublisher_-DescriptorImpl>
+
   environment-dashboard:
     version: 1.1.3
   environment-labels-setter:
@@ -193,6 +236,24 @@ jenkins::plugin_hash:
     version: 1.0
   sidebar-link:
     version: 1.7
+    config_filename: "sidebar-link.xml"
+    config_content: |
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.sidebar__link.SidebarLinkPlugin plugin="sidebar-link@1.7">
+  <links>
+    <hudson.plugins.sidebar__link.LinkAction>
+      <url>https://docs.eng.fireeye.com/</url>
+      <text>Confluence Eng-</text>
+      <icon></icon>
+    </hudson.plugins.sidebar__link.LinkAction>
+    <hudson.plugins.sidebar__link.LinkAction>
+      <url>https://jira.eng.fireeye.com/</url>
+      <text>Jira Eng-</text>
+      <icon></icon>
+    </hudson.plugins.sidebar__link.LinkAction>
+  </links>
+</hudson.plugins.sidebar__link.SidebarLinkPlugin>
+
   sloccount:
     version: "1.20"
   ssh-agent:
