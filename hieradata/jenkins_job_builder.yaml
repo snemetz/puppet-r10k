@@ -1,0 +1,11 @@
+---
+
+jenkins_job_builder::version: latest
+#jenkins_job_builder::user: 
+#jenkins_job_builder::password:
+#jenkins_job_builder::jenkins_url:
+#jenkins_job_builder::jobs:
+#  Puppet_Template_hiera:
+#  Puppet_Template_module:
+#  Puppet_Module_files:
+
