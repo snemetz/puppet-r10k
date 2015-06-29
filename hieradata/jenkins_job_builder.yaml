@@ -7,7 +7,7 @@ jenkins_job_builder::version: latest
 jenkins_job_builder::jobs:
 #  Puppet_Template_hiera:
   Puppet_Template_module:
-    job_yaml:
+    config:
       name: Puppet_Template_module
       description: |
           <p><b>This job is managed by puppet and will be overwritten.</b></p>
@@ -46,7 +46,6 @@ jenkins_job_builder::jobs:
             <p>
             Last run on: `date`
             DESC
-
         - shell: |
             set +x
             #  Test Puppet Documentation
