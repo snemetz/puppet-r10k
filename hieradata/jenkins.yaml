@@ -246,7 +246,7 @@ jenkins::plugin_hash:
           <hudson.plugins.sidebar__link.LinkAction>
             <url>https://docs.eng.fireeye.com:8443/</url>
             <text>Eng Confluence</text>
-            <icon>/userContent/Confluence.png</icon>
+            <icon>/userContent/confluence.png</icon>
           </hudson.plugins.sidebar__link.LinkAction>
           <hudson.plugins.sidebar__link.LinkAction>
             <url>https://jira.eng.fireeye.com:8443/</url>
