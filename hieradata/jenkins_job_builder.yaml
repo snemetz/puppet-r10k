@@ -1,9 +1,9 @@
 ---
 
-jenkins_job_builder::version: latest
-#jenkins_job_builder::user: 
-#jenkins_job_builder::password:
-#jenkins_job_builder::jenkins_url:
+#jenkins_job_builder::version: latest
+##jenkins_job_builder::user: 
+##jenkins_job_builder::password:
+##jenkins_job_builder::jenkins_url:
 jenkins_job_builder::jobs:
 #  Puppet_Template_hiera:
   Puppet_Template_module:
@@ -16,7 +16,7 @@ jenkins_job_builder::jobs:
       concurrent: false
       disabled: true
       github:
-        url://https://github.com/snemetz/puppet-files
+        url: https://github.com/snemetz/puppet-files
       logrotate:
         daysToKeep: -1
         numToKeep: 3
