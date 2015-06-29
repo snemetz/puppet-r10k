@@ -48,6 +48,7 @@ mod 'rtyler/jenkins'
 mod "saz/memcached"
 mod "saz/rsyslog"
 mod "saz/sudo"
+mod "stahnma/epel"
 mod "stankevich/python"
 mod "thias/sysctl"
 mod "thias/vsftpd"
