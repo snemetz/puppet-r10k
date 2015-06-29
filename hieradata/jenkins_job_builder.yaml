@@ -1,6 +1,6 @@
 ---
 
-#jenkins_job_builder::version: latest
+jenkins_job_builder::version: latest
 ##jenkins_job_builder::user: 
 ##jenkins_job_builder::password:
 ##jenkins_job_builder::jenkins_url:
@@ -9,7 +9,7 @@ jenkins_job_builder::jobs:
   Puppet_Template_module:
     config:
       description: |
-        <p><b>This job is managed by puppet and will be overwritten.</b></p>
+          <p><b>This job is managed by puppet and will be overwritten.</b></p>
       project-type: freestyle
       block-downstream: false
       block-upstream: false
@@ -22,7 +22,7 @@ jenkins_job_builder::jobs:
         numToKeep: 3
         artifactDaysToKeep: -1
         artifactNumToKeep: -1
-      node: NodeLabel1 || NodeLabel2
+      node: 'NodeLabel1 || NodeLabel2'
       quiet-period: 5
       scm:
         - git:
@@ -35,79 +35,79 @@ jenkins_job_builder::jobs:
           browser-version: 3.1.0
       builders:
         - shell: |
-          set +x
-          # Create Project Description
-          echo 'Building Project Description'
-          cat <<DESC > project_description
-          Project for testing puppet module $JOB_NAME
-          <p>
-          Current tests:<br>
-          Files Exists, Syntax, Style, Doc, Unit Tests
-          <p>
-          Last run on: `date`
-          DESC
+            set +x
+            echo 'Building Project Description'
+            cat <<DESC > project_description
+            Project for testing puppet module $JOB_NAME
+            <p>
+            Current tests:<br>
+            Files Exists, Syntax, Style, Doc, Unit Tests
+            <p>
+            Last run on: `date`
+            DESC
+
         - shell: |
-          set +x
-          #  Test Puppet Documentation
-          # puppet doc --outputdir /var/www/puppetdocs/ --mode rdoc
-          echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Puppet Doc testing:'
-          find . -name '*.pp' -type f | xargs -r -n 1 -t /opt/puppet/bin/puppetdoc --outputdir ./puppetdocs/ --mode rdoc
+            set +x
+            #  Test Puppet Documentation
+            # puppet doc --outputdir /var/www/puppetdocs/ --mode rdoc
+            echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Puppet Doc testing:'
+            find . -name '*.pp' -type f | xargs -r -n 1 -t /opt/puppet/bin/puppetdoc --outputdir ./puppetdocs/ --mode rdoc
         - shell: |
-          set +x
-          # Test for required files
-          # Test for README*, manifests/init.pp
-          # Stash only supports README.{md,txt} and README confuses it so must be absent
-          echo 'xxxxxxxxxxxxxxxxx';echo 'TESTING: readme files'
-          if [ -f README ]; then
-            echo 'ERROR: Stash does not support README without an extension. Must be .md or .txt'
-            exit 1
-          fi
-          if [ ! -f 'README.md' ] && [ ! -f 'README.markdown' ] && [ ! -f 'README.txt' ]; then
-            echo 'ERROR: No README.md or README.txt file'
-            exit 1
-          fi
-          # There are also: README.rdoc and README.markdown from GitHub repos. Should allow them.
-          echo 'README OK'
+            set +x
+            # Test for required files
+            # Test for README*, manifests/init.pp
+            # Stash only supports README.{md,txt} and README confuses it so must be absent
+            echo 'xxxxxxxxxxxxxxxxx';echo 'TESTING: readme files'
+            if [ -f README ]; then
+              echo 'ERROR: Stash does not support README without an extension. Must be .md or .txt'
+              exit 1
+            fi
+            if [ ! -f 'README.md' ] && [ ! -f 'README.markdown' ] && [ ! -f 'README.txt' ]; then
+              echo 'ERROR: No README.md or README.txt file'
+              exit 1
+            fi
+            # There are also: README.rdoc and README.markdown from GitHub repos. Should allow them.
+            echo 'README OK'
         - shell: |
-          set +x
-          # Style Check - Puppet Lint
-          # puppet-lint --with-filename .
-          echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Puppet Lint testing:'
-          find . -name '*.pp' -type f | xargs -r -n 1 -t /opt/puppet/bin/puppet-lint --log-format '%{path}:%{linenumber}:%{check}:%{KIND}:%{message}' --no-autoloader_layout-check --with-filename
+            set +x
+            # Style Check - Puppet Lint
+            # puppet-lint --with-filename .
+            echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Puppet Lint testing:'
+            find . -name '*.pp' -type f | xargs -r -n 1 -t /opt/puppet/bin/puppet-lint --log-format '%{path}:%{linenumber}:%{check}:%{KIND}:%{message}' --no-autoloader_layout-check --with-filename
         - shell: |
-          set +x
-          # Syntax check - ERB
-          # erb -P -x -T - <template.erb> | ruby -c
-          echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the ERB Syntax check:'
-          find . -name '*.erb' -type f | xargs -r -n 1 -t erb -P -x -T - | /opt/puppet/bin/ruby -c
+            set +x
+            # Syntax check - ERB
+            # erb -P -x -T - <template.erb> | ruby -c
+            echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the ERB Syntax check:'
+            find . -name '*.erb' -type f | xargs -r -n 1 -t erb -P -x -T - | /opt/puppet/bin/ruby -c
         - shell: |
-          set +x
-          # Syntax check - Puppet
-          # puppet parser validate <file.pp>
-          echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Puppet Syntax check:'
-          echo -n 'Puppet version: '; /opt/puppet/bin/puppet --version
-          find . -name '*.pp' -type f | xargs -r -n 1 -t /opt/puppet/bin/puppet parser validate
+            set +x
+            # Syntax check - Puppet
+            # puppet parser validate <file.pp>
+            echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Puppet Syntax check:'
+            echo -n 'Puppet version: '; /opt/puppet/bin/puppet --version
+            find . -name '*.pp' -type f | xargs -r -n 1 -t /opt/puppet/bin/puppet parser validate
         - shell: |
-          set +x
-          # Syntax check - Ruby
-          # ruby -c <file.rb>
-          echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Ruby Syntax check:'
-          find . -name '*.rb' -type f ! -wholename '*_spec.rb' | xargs -r -n 1 -t /opt/puppet/bin/ruby -c
+            set +x
+            # Syntax check - Ruby
+            # ruby -c <file.rb>
+            echo 'xxxxxxxxxxxxxxxxx';echo 'Executing the Ruby Syntax check:'
+            find . -name '*.rb' -type f ! -wholename '*_spec.rb' | xargs -r -n 1 -t /opt/puppet/bin/ruby -c
         - shell: |
-          set +x
-          # Setup Parameters for next job
-          #grab the module URL needed for updating the super-repo:
-          echo 'Saving parameters for new job'
-          cd $WORKSPACE
-          moduleURL=`cat .git/config |grep url`
-          moduleURL=`echo $moduleURL |sed s/&quot;url = &quot;//g`
-          echo "moduleURL=$moduleURL" > parameters.txt
-          #branchName=`git branch |grep \* |sed s/&quot;\* &quot;//`
-          branchName='master'
-          if [[ "${JOB_NAME}" == PuppetDev* ]]; then
-            branchName=`echo ${JOB_NAME} |sed s/&quot;.*-&quot;//`
-          fi
-          echo "branchName=$branchName" >> parameters.txt
+            set +x
+            # Setup Parameters for next job
+            #grab the module URL needed for updating the super-repo:
+            echo 'Saving parameters for new job'
+            cd $WORKSPACE
+            moduleURL=`cat .git/config |grep url`
+            moduleURL=`echo $moduleURL |sed s/&quot;url = &quot;//g`
+            echo "moduleURL=$moduleURL" > parameters.txt
+            #branchName=`git branch |grep \* |sed s/&quot;\* &quot;//`
+            branchName='master'
+            if [[ "${JOB_NAME}" == PuppetDev* ]]; then
+              branchName=`echo ${JOB_NAME} |sed s/&quot;.*-&quot;//`
+            fi
+            echo "branchName=$branchName" >> parameters.txt
       publishers:
         - console-log
       triggers:
