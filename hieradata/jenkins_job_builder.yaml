@@ -7,7 +7,8 @@ jenkins_job_builder::version: latest
 jenkins_job_builder::jobs:
 #  Puppet_Template_hiera:
   Puppet_Template_module:
-    config:
+    job_yaml:
+      name: Puppet_Template_module
       description: |
           <p><b>This job is managed by puppet and will be overwritten.</b></p>
       project-type: freestyle
