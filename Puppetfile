@@ -56,6 +56,12 @@ mod "trlinkin/nsswitch"
 mod "trlinkin/validate_multi"
 mod "zack/r10k"
 
+mod 'files',
+  :git => 'https://github.com/snemetz/puppet-files.git'
+
+mod 'site',
+  :git => 'https://github.com/snemetz/puppet-site.git'
+
 # mod '<module>'[, '<version>']
 #   :git =>
 #   :path =>
