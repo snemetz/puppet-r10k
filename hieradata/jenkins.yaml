@@ -242,18 +242,18 @@ jenkins::plugin_hash:
     config_content: |
       <?xml version='1.0' encoding='UTF-8'?>
       <hudson.plugins.sidebar__link.SidebarLinkPlugin plugin="sidebar-link@1.7">
-      <links>
-        <hudson.plugins.sidebar__link.LinkAction>
-          <url>https://docs.eng.fireeye.com/</url>
-          <text>Confluence Eng root</text>
-          <icon></icon>
-        </hudson.plugins.sidebar__link.LinkAction>
-        <hudson.plugins.sidebar__link.LinkAction>
-          <url>https://jira.eng.fireeye.com/</url>
-          <text>Jira Eng root</text>
-          <icon></icon>
-        </hudson.plugins.sidebar__link.LinkAction>
-      </links>
+        <links>
+          <hudson.plugins.sidebar__link.LinkAction>
+            <url>https://docs.eng.fireeye.com:8443/</url>
+            <text>Eng Confluence</text>
+            <icon>/userContent/Confluence.png</icon>
+          </hudson.plugins.sidebar__link.LinkAction>
+          <hudson.plugins.sidebar__link.LinkAction>
+            <url>https://jira.eng.fireeye.com:8443/</url>
+            <text>Eng Jira</text>
+            <icon>/userContent/jira.png</icon>
+          </hudson.plugins.sidebar__link.LinkAction>
+        </links>
       </hudson.plugins.sidebar__link.SidebarLinkPlugin>
 
   sloccount:
