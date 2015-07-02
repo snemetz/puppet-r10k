@@ -42,6 +42,7 @@ mod "maestrodev/wget"
 mod "nanliu/staging"
 mod "petems/swap_file"
 mod "puppet/jenkins_job_builder"
+mod "purpleidea/gluster"
 mod "rodjek/logrotate"
 # New repo, but not changed in forge yet. mod "jenkinsci/puppet-jenkins"
 mod 'rtyler/jenkins'
@@ -56,9 +57,10 @@ mod "trlinkin/nsswitch"
 mod "trlinkin/validate_multi"
 mod "zack/r10k"
 
+mod 'ceph',
+  :git => 'https://github.com/stackforge/puppet-ceph'
 mod 'files',
   :git => 'https://github.com/snemetz/puppet-files.git'
-
 mod 'site',
   :git => 'https://github.com/snemetz/puppet-site.git'
 
