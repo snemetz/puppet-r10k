@@ -7,6 +7,11 @@ node pe-381-agent-jenkins {
   include jenkins_job_builder
   include files
   files::list{'jenkins-master':}
+  # Jenkins Slaves
+  package { 'puppet-lint':
+    ensure   => latest,
+    provider => 'gem',
+  }
 }
 
 node /storage/ {
