@@ -63,6 +63,8 @@ mod "trlinkin/validate_multi"
 mod "zack/r10k"
 # libvirt
 #   gaudenz/libvirt or thias/libvirt
+# zookeeper
+#   pennycoders/zookeeper or cesnet/zookeeper or razorsedge/cloudera
 
 mod 'ceph',
   :git => 'https://github.com/stackforge/puppet-ceph'
