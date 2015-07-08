@@ -10,8 +10,9 @@ node pe-381-agent-jenkins {
   # Jenkins Slaves
   package { 'puppet-lint':
     ensure   => latest,
-    provider => 'gem',
+    provider => 'pe_gem',
   }
+  # Add puppet-lint plugins
 }
 
 node /storage/ {
