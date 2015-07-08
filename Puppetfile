@@ -21,6 +21,7 @@ mod "puppetlabs/ruby"
 mod "puppetlabs/stdlib"
 mod "puppetlabs/vcsrepo"
 mod "puppetlabs/xinetd"
+#mode "arioch/redis" #???
 # handles limits
 mod "camptocamp/augeas"
 mod "camptocamp/kmod"
@@ -37,6 +38,7 @@ mod "ghoneycutt/nsswitch"
 mod "herculesteam/augeasproviders_core"
 mod "herculesteam/augeasproviders_postgresql"
 mod "ispavailability/file_concat"
+#mod "jfryman/nginx"
 #mod "jlondon/couchbase"
 mod "maestrodev/wget"
 # mod "mwhahaha/pgpool"
@@ -45,6 +47,7 @@ mod "petems/swap_file"
 mod "puppet/jenkins_job_builder"
 #mod "puppet/kafka"
 mod "purpleidea/gluster"
+#mod "razorsedge/network"
 mod "rodjek/logrotate"
 # New repo, but not changed in forge yet. mod "jenkinsci/puppet-jenkins"
 mod 'rtyler/jenkins'
@@ -58,6 +61,8 @@ mod "thias/vsftpd"
 mod "trlinkin/nsswitch"
 mod "trlinkin/validate_multi"
 mod "zack/r10k"
+# libvirt
+#   gaudenz/libvirt or thias/libvirt
 
 mod 'ceph',
   :git => 'https://github.com/stackforge/puppet-ceph'
