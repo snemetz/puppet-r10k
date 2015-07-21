@@ -71,7 +71,7 @@ mod 'ceph',
 mod 'files',
   :git => 'https://github.com/snemetz/puppet-files.git'
 mod 'site',
-  :git => 'https://github.com/snemetz/puppet-site.git'
+  :git => 'https://github.com/devops-workflow/puppet-site.git'
 
 # mod '<module>'[, '<version>']
 #   :git =>
