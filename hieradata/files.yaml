@@ -36,17 +36,17 @@ files_list_jenkins-master:
 
 files_defs:
   jenkins-confluence:
-    source  : site/jenkins/images/confluence.png
+    source  : site_workflow/jenkins/images/confluence.png
     path    : /var/lib/jenkins/userContent/confluence.png
     mode    : '0644'
     backup  : false
   jenkins-jira:
-    source  : site/jenkins/images/jira.png
+    source  : site_workflow/jenkins/images/jira.png
     path    : /var/lib/jenkins/userContent/jira.png
     mode    : '0644'
     backup  : false
   jenkins-testlink:
-    source  : site/jenkins/images/testlink.png
+    source  : site_workflow/jenkins/images/testlink.png
     path    : /var/lib/jenkins/userContent/testlink.png
     mode    : '0644'
     backup  : false
