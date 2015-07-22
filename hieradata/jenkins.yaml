@@ -43,6 +43,13 @@ jenkins::plugin_hash:
     version: 0.17
   buildtriggerbadge:
     version: 2.0
+    manage_config: true
+    config_filename: "buildtriggerbadge.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgePlugin plugin="buildtriggerbadge@2.0">
+        <activated>true</activated>
+      </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgePlugin>
   bulk-builder:
     version: 1.5
   categorized-view:
@@ -65,6 +72,24 @@ jenkins::plugin_hash:
     version: 1.2
   createjobadvanced:
     version: 1.8
+    manage_config: true
+    config_filename: "createjobadvanced.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <hudson.plugins.createjobadvanced.CreateJobAdvancedPlugin plugin="createjobadvanced@1.8">
+        <autoOwnerRights>false</autoOwnerRights>
+        <autoPublicBrowse>true</autoPublicBrowse>
+        <replaceSpace>true</replaceSpace>
+        <activeLogRotator>true</activeLogRotator>
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>3</artifactNumToKeep>
+        <activeDynamicPermissions>false</activeDynamicPermissions>
+        <mvnArchivingDisabled>false</mvnArchivingDisabled>
+        <mvnPerModuleEmail>false</mvnPerModuleEmail>
+        <dynamicPermissionConfigs/>
+      </hudson.plugins.createjobadvanced.CreateJobAdvancedPlugin>
   credentials:
     version: 1.22
   custom-job-icon:
@@ -91,6 +116,34 @@ jenkins::plugin_hash:
     version: 1.9
   email-ext:
     version: 2.40.5
+    manage_config: true
+    config_filename: "hudson.plugins.emailext.ExtendedEmailPublisher.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.40.5">
+        <useSsl>false</useSsl>
+        <charset>UTF-8</charset>
+        <defaultContentType>text/plain</defaultContentType>
+        <defaultSubject>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</defaultSubject>
+        <defaultBody>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
+      &#xd;
+      Check console output at $BUILD_URL to view the results.</defaultBody>
+        <defaultPresendScript></defaultPresendScript>
+        <defaultClasspath/>
+        <defaultTriggerIds>
+          <string>hudson.plugins.emailext.plugins.trigger.FailureTrigger</string>
+        </defaultTriggerIds>
+        <maxAttachmentSize>-1</maxAttachmentSize>
+        <recipientList></recipientList>
+        <defaultReplyTo></defaultReplyTo>
+        <excludedCommitters></excludedCommitters>
+        <overrideGlobalSettings>true</overrideGlobalSettings>
+        <precedenceBulk>false</precedenceBulk>
+        <debugMode>false</debugMode>
+        <enableSecurity>false</enableSecurity>
+        <requireAdminForTemplateTesting>false</requireAdminForTemplateTesting>
+        <enableWatching>false</enableWatching>
+      </hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>
   emailext-template:
     version: 0.4
     manage_config: true
@@ -155,10 +208,34 @@ jenkins::plugin_hash:
     version: 1.11.3
   git:
     version: 2.4.0
+    manage_config: false
+    config_filename: "hudson.plugins.git.GitSCM.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <hudson.plugins.git.GitSCM_-DescriptorImpl plugin="git@2.4.0">
+        <generation>3</generation>
+        <globalConfigName>Jenkins</globalConfigName>
+        <globalConfigEmail>TEAM EMAIL</globalConfigEmail>
+        <createAccountBasedOnEmail>false</createAccountBasedOnEmail>
+      </hudson.plugins.git.GitSCM_-DescriptorImpl>
   git-notes:
     version: 0.0.4
   global-build-stats:
     version: 1.3
+  hipchat:
+    version: 0.1.9
+    manage_config: false
+    config_filename: "jenkins.plugins.hipchat.HipChatNotifier.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <jenkins.plugins.hipchat.HipChatNotifier_-DescriptorImpl plugin="hipchat@0.1.9">
+        <server>api.hipchat.com</server>
+        <token>ADD API TOKEN HERE</token>
+        <v2Enabled>true</v2Enabled>
+        <room>ADD ROOM ID HERE</room>
+        <sendAs>Jenkins</sendAs>
+      </jenkins.plugins.hipchat.HipChatNotifier_-DescriptorImpl>
+
   javadoc:
     version: 1.3
   jobConfigHistory:
@@ -215,6 +292,15 @@ jenkins::plugin_hash:
     version: 1.2.1
   project-description-setter:
     version: 1.1
+    manage_config: true
+    config_filename: "org.jenkinsCi.plugins.projectDescriptionSetter.DescriptionSetterWrapper.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <org.jenkinsCi.plugins.projectDescriptionSetter.DescriptionSetterWrapperDescriptor plugin="project-description-setter@1.1">
+        <charset>UTF-8</charset>
+        <projectDescriptionFilename>project_description</projectDescriptionFilename>
+        <disableTokens>false</disableTokens>
+      </org.jenkinsCi.plugins.projectDescriptionSetter.DescriptionSetterWrapperDescriptor>
   project-health-report:
     version: 1.2
   project-stats-plugin:
