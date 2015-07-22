@@ -70,8 +70,11 @@ mod 'ceph',
   :git => 'https://github.com/stackforge/puppet-ceph'
 mod 'files',
   :git => 'https://github.com/snemetz/puppet-files.git'
+# Tmp until update everything in files data
 mod 'site',
-  :git => 'https://github.com/devops-workflow/puppet-site.git'
+  :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git'
+mod 'site_workflow',
+  :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git'
 
 # mod '<module>'[, '<version>']
 #   :git =>
