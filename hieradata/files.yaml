@@ -54,8 +54,8 @@ files_defs:
     mode    : '0644'
     backup  : false
   jenkins-foreman:
-    source  : site_workflow/jenkins/images/foreman-logo.jpg
-    path    : /var/lib/jenkins/userContent/customIcon/foreman.jpg
+    source  : site_workflow/jenkins/images/foreman-logo.png
+    path    : /var/lib/jenkins/userContent/customIcon/foreman.png
     mode    : '0644'
     backup  : false
   jenkins-github:
@@ -69,8 +69,8 @@ files_defs:
     mode    : '0644'
     backup  : false
   jenkins-hipchat:
-    source  : site_workflow/jenkins/images/hipchat-logo-80x80.jpg
-    path    : /var/lib/jenkins/userContent/customIcon/hipchat.jpg
+    source  : site_workflow/jenkins/images/hipchat-logo-80x80.png
+    path    : /var/lib/jenkins/userContent/customIcon/hipchat.png
     mode    : '0644'
     backup  : false
   jenkins-jira:
@@ -79,8 +79,8 @@ files_defs:
     mode    : '0644'
     backup  : false
   jenkins-puppetlabs:
-    source  : site_workflow/jenkins/images/puppetlabs-logo-48x48.jpg
-    path    : /var/lib/jenkins/userContent/customIcon/puppetlabs.jpg
+    source  : site_workflow/jenkins/images/puppetlabs-logo-48x48.png
+    path    : /var/lib/jenkins/userContent/customIcon/puppetlabs.png
     mode    : '0644'
     backup  : false
   jenkins-redhat:
