@@ -31,7 +31,9 @@ files_list_jenkins-images:
   - jenkins-github
   - jenkins-grafana
   - jenkins-hipchat
+  - jenkins-jenkins
   - jenkins-jira
+  - jenkins-openstack
   - jenkins-puppetlabs
   - jenkins-redhat
   - jenkins-testlink
@@ -73,9 +75,19 @@ files_defs:
     path    : /var/lib/jenkins/userContent/customIcon/hipchat.png
     mode    : '0644'
     backup  : false
+  jenkins-jenkins:
+    source  : site_workflow/jenkins/images/jenkins-logo-48x48.png
+    path    : /var/lib/jenkins/userContent/customIcon/jenkins.png
+    mode    : '0644'
+    backup  : false
   jenkins-jira:
     source  : site_workflow/jenkins/images/jira-logo.png
     path    : /var/lib/jenkins/userContent/customIcon/jira.png
+    mode    : '0644'
+    backup  : false
+  jenkins-openstack:
+    source  : site_workflow/jenkins/images/openstack-logo-70x70.png
+    path    : /var/lib/jenkins/userContent/customIcon/openstack.png
     mode    : '0644'
     backup  : false
   jenkins-puppetlabs:
