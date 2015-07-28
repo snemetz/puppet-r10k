@@ -31,8 +31,6 @@ jenkins::plugin_hash:
     version: 1.13.0
   buildgraph-view:
     version: 1.1.1
-  build-history-metrics-plugin:
-    version: 1.2
   build-metrics:
     version: 1.0
   build-pipeline-plugin:
@@ -268,8 +266,6 @@ jenkins::plugin_hash:
     version: 1.2
   monitoring:
     version: 1.56.0
-  mttr:
-    version: 1.1
   multi-branch-project-plugin:
     version: 0.2.3
   nested-view:
