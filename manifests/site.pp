@@ -7,11 +7,13 @@ node pe-381-agent-jenkins {
   include jenkins_job_builder
   include files
   files::list{'jenkins-master':}
+  package { 'graphviz': ensure => latest, }
   # Jenkins Slaves
   package { 'puppet-lint':
     ensure   => latest,
     provider => 'pe_gem',
   }
+  package { 'lsb': ensure => latest, }
   # Add puppet-lint plugins
 }
 
