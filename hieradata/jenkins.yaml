@@ -236,6 +236,8 @@ jenkins::plugin_hash:
 
   javadoc:
     version: 1.3
+  jenkinslint:
+    version: "0.2.0"
   jobConfigHistory:
     version: 2.11
   job-dsl:
