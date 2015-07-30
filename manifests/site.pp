@@ -13,8 +13,9 @@ node pe-381-agent-jenkins {
     ensure   => latest,
     provider => 'pe_gem',
   }
-  package { 'lsb': ensure => latest, }
   # Add puppet-lint plugins
+  package { 'lsb': ensure => latest, }
+  package { 'jb': ensure => latest, }
 }
 
 node /storage/ {
