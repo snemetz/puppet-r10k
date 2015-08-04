@@ -440,6 +440,26 @@ jenkins::plugin_hash:
             <linkName>YAML Syntax</linkName>
             <trendName>YAML Syntax</trendName>
           </hudson.plugins.warnings.GroovyParser>
+          <hudson.plugins.warnings.GroovyParser>
+            <name>Custom Bash Syntax</name>
+            <regexp>^BASH_SYNTAX:([^:]*): line (\d+):(.*)$</regexp>
+            <script>
+      import hudson.plugins.warnings.parser.Warning
+      import hudson.plugins.analysis.util.model.Priority
+      
+      String fileName = matcher.group(1)
+      String lineNumber = matcher.group(2)
+      String message = matcher.group(3)
+      Priority prio = Priority.HIGH
+      category = &quot;error&quot;
+      
+      return new Warning(fileName, Integer.parseInt(lineNumber), &quot;Bash Syntax&quot;, category, message, prio);
+            </script>
+            <example>BASH_SYNTAX:a: line 3: syntax error near unexpected token `;&apos;
+            </example>
+            <linkName>Bash Syntax</linkName>
+            <trendName>Bash Syntax</trendName>
+          </hudson.plugins.warnings.GroovyParser>
         </groovyParsers>
       </hudson.plugins.warnings.WarningsDescriptor>
 
