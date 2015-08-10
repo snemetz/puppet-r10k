@@ -39,13 +39,14 @@ mod "herculesteam/augeasproviders_core"
 mod "herculesteam/augeasproviders_postgresql"
 mod "ispavailability/file_concat"
 #mod "jfryman/nginx"
-#mod "jlondon/couchbase"
+mod "jlondon/couchbase"
 mod "maestrodev/wget"
 # mod "mwhahaha/pgpool"
 mod "nanliu/staging"
+mod "pennycoders/zookeeper"
 mod "petems/swap_file"
 mod "puppet/jenkins_job_builder"
-#mod "puppet/kafka"
+mod "puppet/kafka"
 mod "purpleidea/gluster"
 #mod "razorsedge/network"
 mod "rodjek/logrotate"
@@ -61,6 +62,9 @@ mod "thias/vsftpd"
 mod "trlinkin/nsswitch"
 mod "trlinkin/validate_multi"
 mod "zack/r10k"
+# flume - No apache version on forge
+#   https://github.com/salekseev/puppet-flume - Old but may be good start - flume-ng-agent package
+#   https://github.com/salekseev/athena-flume-ng - flume-ng RPM packaging using fpm
 # libvirt
 #   gaudenz/libvirt or thias/libvirt
 # zookeeper
