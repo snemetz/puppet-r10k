@@ -1,6 +1,6 @@
 node pe-381-master {
   class { '::profiles::base': }
-  package { 'jb': ensure => latest, }
+  package { 'jq': ensure => latest, }
 }
 
 node pe-381-agent-jenkins {
