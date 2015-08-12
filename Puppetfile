@@ -81,6 +81,8 @@ mod 'ceph',
   :git => 'https://github.com/stackforge/puppet-ceph'
 mod 'files',
   :git => 'https://github.com/snemetz/puppet-files.git'
+mod 'profiles',
+  :git => 'https://github.com/devops-workflow/puppet_module_profiles.git'
 mod 'site_workflow',
   :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git'
 
