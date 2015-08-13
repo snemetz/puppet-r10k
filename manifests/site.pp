@@ -12,7 +12,8 @@ node pe-381-agent-app {
   class { '::profiles::base': }
   #class { '::profiles::haproxy': }
   #class { '::profiles::kafka': }
-  class { '::profiles::flume': }
+  # No module yet - class { '::profiles::flume': }
+  class { '::profiles::zookeeper': }
 
 }
 
