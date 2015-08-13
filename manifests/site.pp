@@ -10,7 +10,8 @@ node pe-381-agent-jenkins {
 
 node pe-381-agent-app {
   class { '::profiles::base': }
-  class { '::profiles::haproxy': }
+  #class { '::profiles::haproxy': }
+  class { '::profiles::kafka': }
 
 }
 
