@@ -388,7 +388,7 @@ jenkins::plugin_hash:
         <groovyParsers>
           <hudson.plugins.warnings.GroovyParser>
             <name>Custom Puppet Syntax</name>
-            <regexp>^PUPPET_SYNTAX[^:]*:(.*):.*(warning|err|Error):\s*(.*)$</regexp>
+            <regexp>^PUPPET_SYNTAX[^:]*:(.*):.*(Warning|err|Error):\s*(.*)$</regexp>
             <script>
       import hudson.plugins.warnings.parser.Warning
       import hudson.plugins.analysis.util.model.Priority
