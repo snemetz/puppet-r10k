@@ -11,9 +11,9 @@ node pe-381-agent-jenkins {
 node pe-381-agent-app {
   class { '::profiles::base': }
   #class { '::profiles::haproxy': }
-  class { '::profiles::kafka': }
+  #class { '::profiles::kafka': }
   # No module yet - class { '::profiles::flume': }
-  #class { '::profiles::zookeeper': }
+  class { '::profiles::zookeeper': }
 
 }
 
