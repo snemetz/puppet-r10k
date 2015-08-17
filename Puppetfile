@@ -50,7 +50,6 @@ mod "locp/cassandra"
 mod "maestrodev/wget"
 # mod "mwhahaha/pgpool"
 mod "nanliu/staging"
-mod "pennycoders/zookeeper"
 mod "petems/swap_file"
 mod "puppet/jenkins_job_builder"
 mod "puppet/kafka"
@@ -85,6 +84,9 @@ mod 'profiles',
   :git => 'https://github.com/devops-workflow/puppet_module_profiles.git'
 mod 'site_workflow',
   :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git'
+#mod "pennycoders/zookeeper"
+mod 'zookeeper',
+  :git => 'https://github.com/devops-workflow/puppet_module_zookeeper.git'
 
 # mod '<module>'[, '<version>']
 #   :git =>
