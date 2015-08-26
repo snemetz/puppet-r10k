@@ -46,6 +46,7 @@ mod "herculesteam/augeasproviders_postgresql"
 mod "ispavailability/file_concat"
 #mod "jfryman/nginx"
 mod "jlondon/couchbase"
+mod "juniper/netdev_stdlib_junos"
 mod "landcareresearch/solr"
 mod "locp/cassandra"
 mod "maestrodev/wget"
@@ -78,6 +79,8 @@ mod "zack/r10k"
 #   https://github.com/salekseev/athena-flume-ng - flume-ng RPM packaging using fpm
 # libvirt
 #   gaudenz/libvirt or thias/libvirt
+# lldpd with facter support
+#   github.com mfournier/lldp or narcisbcn/lldp
 # zookeeper
 #   pennycoders/zookeeper or cesnet/zookeeper or razorsedge/cloudera
 
