@@ -1,6 +1,10 @@
 node pe-381-master {
   class { '::profiles::base': }
   package { 'jq': ensure => latest, }
+  package { 'netconf':
+    ensure   => present,
+    provider => 'pe_gem',
+  }
 }
 
 node pe-381-agent-jenkins {
