@@ -58,6 +58,7 @@ mod "puppet/jenkins_job_builder"
 mod "puppet/kafka"
 mod "purpleidea/gluster"
 #mod "razorsedge/network"
+mod "razorsedge/openlldp"
 mod "rodjek/logrotate"
 # New repo, but not changed in forge yet. mod "jenkinsci/puppet-jenkins"
 mod 'rtyler/jenkins'
