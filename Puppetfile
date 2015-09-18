@@ -88,28 +88,26 @@ mod "zack/r10k"
 
 mod 'ceph',
   :git => 'https://github.com/stackforge/puppet-ceph'
+  :ref => 'master'
 mod 'files',
   :git => 'https://github.com/snemetz/puppet-files.git'
+  :ref => 'master'
 mod 'profiles',
   :git => 'https://github.com/devops-workflow/puppet_module_profiles.git'
+  :ref => 'master'
 mod 'site_workflow',
   :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git'
+  :ref => 'master'
 #mod "pennycoders/zookeeper"
 mod 'zookeeper',
   :git => 'https://github.com/devops-workflow/puppet_module_zookeeper.git'
+  :ref => 'master'
 
 # mod '<module>'[, '<version>']
 #   :git =>
 #   :path =>
 #   :ref => <branch/sha/tag/anything that git will recognize>
 #   :github_tarball =>
-
-# Modules from Github using various references
-#mod 'notifyme',
-#  :git => 'git://github.com/glarizza/puppet-notifyme',
-#  :ref => '50c01703b2e3e352520a9a2271ea4947fe17a51f'
-
-#mod 'profiles',
-#  :git => 'git://github.com/glarizza/puppet-profiles',
-#  :ref => '3611ae4253ff01762f9bda1d93620edf8f9a3b22'
+#   :branch => '1.2.x'
+#   :tag => '3.0.0'
 
