@@ -87,20 +87,20 @@ mod "zack/r10k"
 #   pennycoders/zookeeper or cesnet/zookeeper or razorsedge/cloudera
 
 mod 'ceph',
-  :git => 'https://github.com/stackforge/puppet-ceph'
+  :git => 'https://github.com/stackforge/puppet-ceph',
   :ref => 'master'
 mod 'files',
-  :git => 'https://github.com/snemetz/puppet-files.git'
+  :git => 'https://github.com/snemetz/puppet-files.git',
   :ref => 'master'
 mod 'profiles',
-  :git => 'https://github.com/devops-workflow/puppet_module_profiles.git'
+  :git => 'https://github.com/devops-workflow/puppet_module_profiles.git',
   :ref => 'master'
 mod 'site_workflow',
-  :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git'
+  :git => 'https://github.com/devops-workflow/puppet_module_site_workflow.git',
   :ref => 'master'
 #mod "pennycoders/zookeeper"
 mod 'zookeeper',
-  :git => 'https://github.com/devops-workflow/puppet_module_zookeeper.git'
+  :git => 'https://github.com/devops-workflow/puppet_module_zookeeper.git',
   :ref => 'master'
 
 # mod '<module>'[, '<version>']
