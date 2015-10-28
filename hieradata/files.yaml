@@ -25,6 +25,7 @@ files_list_default:
   - root 
 
 files_list_jenkins-images:
+  - jenkins-button-test
   - jenkins-centos
   - jenkins-confluence
   - jenkins-foreman
@@ -33,6 +34,7 @@ files_list_jenkins-images:
   - jenkins-hipchat
   - jenkins-jenkins
   - jenkins-jira
+  - jenkins-lifecycle
   - jenkins-nagios
   - jenkins-openstack
   - jenkins-puppetlabs
@@ -46,6 +48,11 @@ files_list_jenkins-master:
 # Doc all fields
 
 files_defs:
+  jenkins-button-test:
+    source  : site_workflow/jenkins/images/button-test-32x32.png
+    path    : /var/lib/jenkins/userContent/customIcon/button-test.png
+    mode    : '0644'
+    backup  : false
   jenkins-centos:
     source  : site_workflow/jenkins/images/centos-logo-32x32.png
     path    : /var/lib/jenkins/userContent/customIcon/centos.png
@@ -84,6 +91,11 @@ files_defs:
   jenkins-jira:
     source  : site_workflow/jenkins/images/jira-logo.png
     path    : /var/lib/jenkins/userContent/customIcon/jira.png
+    mode    : '0644'
+    backup  : false
+  jenkins-lifecycle:
+    source  : site_workflow/jenkins/images/lifecycle-management-32x32.png
+    path    : /var/lib/jenkins/userContent/customIcon/lifecycle.png
     mode    : '0644'
     backup  : false
   jenkins-nagios:
