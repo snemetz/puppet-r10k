@@ -6,7 +6,9 @@
 ##  configure R10k according to glarizza's blog post on directory environments.
 ##  Beware! (and good luck!)
 
-class { 'r10k':
+# lint:ignore:global_resource
+class { '::r10k':
+# lint:endignore
   #version           => '1.3.2',
   sources           => {
     'puppet' => {
@@ -14,7 +16,7 @@ class { 'r10k':
       'remote'  => 'https://github.com/snemetz/puppet-r10k.git',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
-    }
+    },
   },
   purgedirs         => ["${::settings::confdir}/environments"],
   manage_modulepath => false,

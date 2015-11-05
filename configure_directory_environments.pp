@@ -13,6 +13,7 @@ Ini_setting {
   # notify => Exec['trigger_r10k'],
 }
 
+# lint:ignore:global_resource
 ini_setting { 'Configure environmentpath':
   section => 'main',
   setting => 'environmentpath',
@@ -27,6 +28,8 @@ ini_setting { 'Configure basemodulepath':
 
 exec { 'trigger_r10k':
   command     => 'r10k deploy environment -p',
+  # lint:ignore:80char
   path        => '/opt/puppet/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin',
   refreshonly => true,
 }
+# lint:endignore
