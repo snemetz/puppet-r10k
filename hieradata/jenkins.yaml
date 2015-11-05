@@ -16,7 +16,7 @@ jenkins::plugin_hash:
   analysis-core:
     version: 1.74
   AnchorChain:
-    version: 1.0
+    version: "1.0"
   antisamy-markup-formatter:
     version: 1.3
   ant:
@@ -32,7 +32,7 @@ jenkins::plugin_hash:
   buildgraph-view:
     version: 1.1.1
   build-metrics:
-    version: 1.0
+    version: "1.0"
   build-pipeline-plugin:
     version: 1.4.8
   build-timeout:
@@ -65,7 +65,7 @@ jenkins::plugin_hash:
   confluence-publisher:
     version: 1.8
   copyartifact:
-    version: 1.36.1
+    version: 1.37
   create-fingerprint:
     version: 1.2
   createjobadvanced:
@@ -105,7 +105,7 @@ jenkins::plugin_hash:
   deployment-sphere:
     version: 0.1.105
   description-setter:
-    version: 1.10
+    version: "1.10"
   disk-usage:
     version: 0.28
   doclinks:
@@ -201,13 +201,13 @@ jenkins::plugin_hash:
   fstrigger:
     version: 0.39
   git-client:
-    version: 1.19.0
+    version: "1.19.0"
   github-api:
     version: 1.69
   github:
-    version: 1.14.0
+    version: "1.14.0"
   git:
-    version: 2.4.0
+    version: "2.4.0"
     manage_config: false
     config_filename: "hudson.plugins.git.GitSCM.xml"
     config_content: |
@@ -254,7 +254,7 @@ jenkins::plugin_hash:
       </hudson.plugins.gradle.Gradle_-DescriptorImpl>
 
   hipchat:
-    version: 0.2.0
+    version: "0.2.0"
     manage_config: false
     config_filename: "jenkins.plugins.hipchat.HipChatNotifier.xml"
     config_content: |
@@ -312,7 +312,7 @@ jenkins::plugin_hash:
   nested-view:
     version: 1.14
   next-executions:
-    version: 1.0.10
+    version: "1.0.10"
   nodelabelparameter:
     version: 1.5.1
   packer:
@@ -388,7 +388,7 @@ jenkins::plugin_hash:
       </hudson.plugins.sidebar__link.SidebarLinkPlugin>
 
   sloccount:
-    version: "1.20"
+    version: "1.21"
   ssh-agent:
     version: 1.8 
   ssh-credentials:
@@ -396,19 +396,19 @@ jenkins::plugin_hash:
   ssh:
     version: 2.4
   ssh-slaves:
-    version: 1.9
+    version: "1.10"
   status-view:
-    version: 1.0
+    version: "1.0"
   systemloadaverage-monitor:
     version: 1.2
   team-views:
-    version: 0.9.0
+    version: "0.9.0"
   template-project:
     version: 1.5.1
   test-results-analyzer:
     version: 0.2.2
   test-stability:
-    version: 1.0
+    version: "1.0"
   timestamper:
     version: 1.7.2
   token-macro:
@@ -424,7 +424,7 @@ jenkins::plugin_hash:
   violations:
     version: 0.7.11
   warnings:
-    version: 4.50
+    version: "4.50"
     manage_config: true
     config_filename: "hudson.plugins.warnings.WarningsPublisher.xml"
     config_content: |
