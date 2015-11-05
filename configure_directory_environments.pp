@@ -15,21 +15,26 @@ Ini_setting {
 
 # lint:ignore:global_resource
 ini_setting { 'Configure environmentpath':
+# lint:endignore
   section => 'main',
   setting => 'environmentpath',
   value   => '$confdir/environments',
 }
 
+# lint:ignore:global_resource
 ini_setting { 'Configure basemodulepath':
+# lint:endignore
   section => 'main',
   setting => 'basemodulepath',
   value   => '$confdir/modules:/opt/puppet/share/puppet/modules',
 }
 
+# lint:ignore:global_resource
 exec { 'trigger_r10k':
+# lint:endignore
   command     => 'r10k deploy environment -p',
-  # lint:ignore:80char
+  # lint:ignore:80chars
   path        => '/opt/puppet/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin',
+  # lint:endignore
   refreshonly => true,
 }
-# lint:endignore
