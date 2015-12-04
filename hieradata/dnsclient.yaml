@@ -1,0 +1,18 @@
+---
+
+dnsclient::domain: example.com
+dnsclient::search:
+  - example.com
+  - cloud.ex
+
+##==========================
+## Other possible settings
+##==========================
+#dnsclient::nameservers
+#dnsclient::options
+#dnsclient::sortlist
+#dnsclient::resolver_config_file
+#dnsclient::resolver_config_file_ensure
+#dnsclient::resolver_config_file_owner
+#dnsclient::resolver_config_file_group
+#dnsclient::resolver_config_file_mode
