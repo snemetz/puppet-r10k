@@ -1,0 +1,8 @@
+---
+# Common data for all environments
+# May be overwriten by environment and module specific yaml files
+locations:
+  - loc1
+  - loc2
+  - dc1
+  - dc2
