@@ -55,7 +55,6 @@ mod "maestrodev/wget"
 mod "nanliu/staging"
 mod "netdevops/netdev_stdlib"
 mod "petems/swap_file"
-mod "puppet/jenkins_job_builder"
 mod "puppet/kafka"
 # mod "purpleidea/gluster"
 # mod "razorsedge/network"
@@ -92,6 +91,11 @@ mod 'ceph',
   :ref => 'master'
 mod 'files',
   :git => 'https://github.com/snemetz/puppet-files.git',
+  :ref => 'master'
+# Fork for CentOS 7 support
+# mod "puppet/jenkins_job_builder"
+mod 'jenkins_job_builder',
+  :git => 'https://github.com/devops-workflow/puppet_module_jenkins_job_builder.git',
   :ref => 'master'
 mod 'profiles',
   :git => 'https://github.com/devops-workflow/puppet_module_profiles.git',
