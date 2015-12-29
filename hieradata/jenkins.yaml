@@ -305,6 +305,27 @@ jenkins::plugin_hash:
     version: 1.6
   maven-plugin:
     version: "2.12.1"
+    manage_config: true
+    config_filename: "hudson.tasks.Maven.xml"
+    config_content: |
+      <?xml version='1.0' encoding='UTF-8'?>
+      <hudson.tasks.Maven_-DescriptorImpl>
+        <installations>
+          <hudson.tasks.Maven_-MavenInstallation>
+            <name>Maven 3.3.3</name>
+            <properties>
+              <hudson.tools.InstallSourceProperty>
+                <installers>
+                  <hudson.tasks.Maven_-MavenInstaller>
+                    <id>3.3.3</id>
+                  </hudson.tasks.Maven_-MavenInstaller>
+                </installers>
+              </hudson.tools.InstallSourceProperty>
+            </properties>
+          </hudson.tasks.Maven_-MavenInstallation>
+        </installations>
+      </hudson.tasks.Maven_-DescriptorImpl>
+
   modernstatus:
     version: 1.2
   monitoring:
@@ -438,6 +459,26 @@ jenkins::plugin_hash:
       <hudson.plugins.warnings.WarningsDescriptor plugin="warnings@4.50">
         <groovyParsers>
           <hudson.plugins.warnings.GroovyParser>
+            <name>Custom Bash Syntax</name>
+            <regexp>^BASH_SYNTAX:([^:]*): line (\d+):(.*)$</regexp>
+            <script>
+      import hudson.plugins.warnings.parser.Warning
+      import hudson.plugins.analysis.util.model.Priority
+      
+      String fileName = matcher.group(1)
+      String lineNumber = matcher.group(2)
+      String message = matcher.group(3)
+      Priority prio = Priority.HIGH
+      category = &quot;error&quot;
+      
+      return new Warning(fileName, Integer.parseInt(lineNumber), &quot;Bash Syntax&quot;, category, message, prio);
+            </script>
+            <example>BASH_SYNTAX:a: line 3: syntax error near unexpected token `;&apos;
+            </example>
+            <linkName>Bash Syntax</linkName>
+            <trendName>Bash Syntax</trendName>
+          </hudson.plugins.warnings.GroovyParser>
+          <hudson.plugins.warnings.GroovyParser>
             <name>Custom Puppet Syntax</name>
             <regexp>^PUPPET_SYNTAX[^:]*:(.*):.*(Warning|err|Error):\s*(.*)$</regexp>
             <script>
@@ -473,6 +514,24 @@ jenkins::plugin_hash:
             <trendName>Puppet Syntax</trendName>
           </hudson.plugins.warnings.GroovyParser>
           <hudson.plugins.warnings.GroovyParser>
+            <name>Custom Splint</name>
+            <regexp>^splint:\d+\,\d+\,(.*)\,\d+\,(.*)\,(\d+)\,\d+\,\&quot;(.*)\&quot;\,\&quot;(.*)\&quot;$</regexp>
+            <script>import hudson.plugins.warnings.parser.Warning
+      import hudson.plugins.analysis.util.model.Priority
+  
+      String category=&apos;Splint Warnings&apos;
+      String fileName = matcher.group(2)
+      String lineNumber = matcher.group(3)
+      String type = matcher.group(1)
+      String message = matcher.group(5)
+  
+      return new Warning(fileName, Integer.parseInt(lineNumber), type, category, message, Priority.LOW);
+            </script>
+            <example></example>
+            <linkName>Splint</linkName>
+            <trendName>Splint</trendName>
+          </hudson.plugins.warnings.GroovyParser>
+          <hudson.plugins.warnings.GroovyParser>
             <name>Custom YAML Syntax</name>
             <regexp>^YAML_SYNTAX:([^:]*):(ERROR):([0-9]+):(.*)$</regexp>
             <script>
@@ -490,26 +549,6 @@ jenkins::plugin_hash:
             <example></example>
             <linkName>YAML Syntax</linkName>
             <trendName>YAML Syntax</trendName>
-          </hudson.plugins.warnings.GroovyParser>
-          <hudson.plugins.warnings.GroovyParser>
-            <name>Custom Bash Syntax</name>
-            <regexp>^BASH_SYNTAX:([^:]*): line (\d+):(.*)$</regexp>
-            <script>
-      import hudson.plugins.warnings.parser.Warning
-      import hudson.plugins.analysis.util.model.Priority
-      
-      String fileName = matcher.group(1)
-      String lineNumber = matcher.group(2)
-      String message = matcher.group(3)
-      Priority prio = Priority.HIGH
-      category = &quot;error&quot;
-      
-      return new Warning(fileName, Integer.parseInt(lineNumber), &quot;Bash Syntax&quot;, category, message, prio);
-            </script>
-            <example>BASH_SYNTAX:a: line 3: syntax error near unexpected token `;&apos;
-            </example>
-            <linkName>Bash Syntax</linkName>
-            <trendName>Bash Syntax</trendName>
           </hudson.plugins.warnings.GroovyParser>
         </groovyParsers>
       </hudson.plugins.warnings.WarningsDescriptor>
