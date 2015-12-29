@@ -426,6 +426,8 @@ jenkins::plugin_hash:
     version: "1.10"
   status-view:
     version: "1.0"
+  swarm:
+    version: "2.0"
   systemloadaverage-monitor:
     version: 1.2
   team-views:
