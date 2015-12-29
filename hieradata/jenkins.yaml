@@ -2,6 +2,8 @@
 
 jenkins::configure_firewall: true
 
+jenkins::slave::version: "2.0"
+
 jenkins::plugin_hash:
   cvs:
     enabled: false
