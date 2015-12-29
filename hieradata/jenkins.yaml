@@ -12,15 +12,15 @@ jenkins::plugin_hash:
   all-changes:
     version: 1.3
   analysis-collector:
-    version: 1.45
+    version: 1.46
   analysis-core:
-    version: 1.74
+    version: 1.75
   AnchorChain:
     version: "1.0"
-  antisamy-markup-formatter:
-    version: 1.3
   ant:
     version: 1.2
+  antisamy-markup-formatter:
+    version: 1.3
   any-buildstep:
     version: 0.1
   beaker-builder:
@@ -28,17 +28,17 @@ jenkins::plugin_hash:
   build-environment:
     version: 1.6
   build-failure-analyzer:
-    version: 1.13.1
-  buildgraph-view:
-    version: 1.1.1
+    version: 1.13.2
   build-metrics:
     version: "1.0"
   build-pipeline-plugin:
-    version: 1.4.8
+    version: 1.4.9
   build-timeout:
-    version: 1.15
+    version: 1.15.1
+  buildgraph-view:
+    version: 1.1.1
   buildresult-trigger:
-    version: 0.17
+    version: "0.17"
   buildtriggerbadge:
     version: 2.2
     manage_config: true
@@ -54,8 +54,10 @@ jenkins::plugin_hash:
     version: 1.8
   claim:
     version: 2.7
+  cloudbees-folder:
+    version: 5.1
   cluster-stats:
-    version: 0.4.6
+    version: "0.4.6"
   computer-queue-plugin:
     version: 1.4
   conditional-buildstep:
@@ -91,25 +93,25 @@ jenkins::plugin_hash:
   credentials:
     version: 1.24
   custom-job-icon:
-    version: 0.2
+    version: "0.2"
   dashboard-view:
-    version: 2.9.6
+    version: 2.9.7
   delivery-pipeline-plugin:
-    version: 0.9.7
+    version: "0.9.8"
   dependency-check-jenkins-plugin:
-    version: 1.3.1
+    version: 1.3.3
   depgraph-view:
-    version: 0.11
+    version: "0.11"
   deployment-notification:
     version: 1.2
   deployment-sphere:
-    version: 0.1.105
+    version: "0.1.105"
   description-setter:
     version: "1.10"
   disk-usage:
-    version: 0.28
+    version: "0.28"
   doclinks:
-    version: 0.6
+    version: "0.6"
   downstream-buildview:
     version: 1.9
   email-ext:
@@ -143,7 +145,7 @@ jenkins::plugin_hash:
         <enableWatching>false</enableWatching>
       </hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>
   emailext-template:
-    version: 0.4
+    version: "0.4"
     manage_config: true
     config_filename: "org.jenkinsci.plugins.emailext_template.ExtendedEmailTemplatePublisher.xml"
     config_content: |
@@ -197,15 +199,9 @@ jenkins::plugin_hash:
   files-found-trigger:
     version: 1.4
   flexible-publish:
-    version: 0.15.2
+    version: "0.15.2"
   fstrigger:
-    version: 0.39
-  git-client:
-    version: "1.19.0"
-  github-api:
-    version: 1.69
-  github:
-    version: "1.14.0"
+    version: "0.39"
   git:
     version: "2.4.0"
     manage_config: false
@@ -218,8 +214,14 @@ jenkins::plugin_hash:
         <globalConfigEmail>TEAM EMAIL</globalConfigEmail>
         <createAccountBasedOnEmail>false</createAccountBasedOnEmail>
       </hudson.plugins.git.GitSCM_-DescriptorImpl>
+  git-client:
+    version: "1.19.0"
   git-notes:
-    version: 0.0.4
+    version: "0.0.4"
+  github:
+    version: "1.14.2"
+  github-api:
+    version: 1.71
   global-build-stats:
     version: 1.3
   gradle:
@@ -268,23 +270,23 @@ jenkins::plugin_hash:
       </jenkins.plugins.hipchat.HipChatNotifier_-DescriptorImpl>
 
   htmlpublisher:
-    version: 1.8
+    version: "1.10"
   javadoc:
     version: 1.3
   jenkinslint:
     version: "0.5.0"
+  job-dsl:
+    version: 1.41
+  job-parameter-summary:
+    version: "0.3"
   jobConfigHistory:
     version: 2.12
-  job-dsl:
-    version: 1.39
-  job-parameter-summary:
-    version: 0.3
   jquery:
-    version: 1.11.2-0
+    version: "1.11.2-0"
   jquery-ui:
     version: 1.0.2
   junit:
-    version: 1.9
+    version: "1.10"
   label-linked-jobs:
     version: 4.0.2
   label-verifier:
@@ -292,9 +294,9 @@ jenkins::plugin_hash:
   ldap:
     version: 1.11
   mailer:
-    version: 1.15
+    version: 1.16
   mapdb-api:
-    version: 1.0.6.0
+    version: "1.0.6.0"
   mashup-portlets-plugin:
     version: 1.0.5
   matrix-auth:
@@ -306,25 +308,27 @@ jenkins::plugin_hash:
   modernstatus:
     version: 1.2
   monitoring:
-    version: 1.57.0
+    version: "1.58.0"
   multi-branch-project-plugin:
-    version: 0.3
+    version: "0.4.1"
   nested-view:
     version: 1.14
   next-executions:
     version: "1.0.10"
   nodelabelparameter:
-    version: 1.5.1
+    version: 1.7
   packer:
     version: 1.2
   pam-auth:
     version: 1.2
   parameterized-trigger:
-    version: 2.29
+    version: "2.30"
+  plain-credentials:
+    version: 1.1
   platformlabeler:
     version: 1.1
   plugin-usage-plugin:
-    version: 0.3
+    version: "0.3"
   project-build-times:
     version: 1.2.1
   project-description-setter:
@@ -341,27 +345,29 @@ jenkins::plugin_hash:
   project-health-report:
     version: 1.2
   project-stats-plugin:
-    version: 0.4
+    version: "0.4"
   publish-over-ssh:
     version: 1.13
   puppet:
-    version: 1.0
+    version: "1.1"
+  pyenv:
+    version: "0.0.7"
   rebuild:
     version: 1.25
   rich-text-publisher-plugin:
     version: 1.3
   role-strategy:
-    version: 2.2.0
+    version: "2.2.0"
   ruby-runtime:
-    version: 0.12
+    version: "0.12"
   run-condition:
-    version: 1.0
+    version: "1.0"
   scm-api:
-    version: 0.2
+    version: "0.2"
   script-security:
     version: 1.15
   sectioned-view:
-    version: 1.19
+    version: "1.20"
   # shiningpanda:
   #  version: 
   show-build-parameters:
@@ -389,12 +395,12 @@ jenkins::plugin_hash:
 
   sloccount:
     version: "1.21"
-  ssh-agent:
-    version: 1.8 
-  ssh-credentials:
-    version: 1.11
   ssh:
     version: 2.4
+  ssh-agent:
+    version: 1.9 
+  ssh-credentials:
+    version: 1.11
   ssh-slaves:
     version: "1.10"
   status-view:
@@ -406,15 +412,15 @@ jenkins::plugin_hash:
   template-project:
     version: 1.5.1
   test-results-analyzer:
-    version: 0.2.2
+    version: "0.2.3"
   test-stability:
     version: "1.0"
   timestamper:
     version: 1.7.2
   token-macro:
-    version: "1.11"
+    version: "1.12.1"
   tool-labels-plugin:
-    version: 3.0
+    version: "3.0"
   translation:
     version: 1.12
   validating-string-parameter:
@@ -422,9 +428,9 @@ jenkins::plugin_hash:
   view-job-filters:
     version: 1.27
   violations:
-    version: 0.7.11
+    version: "0.7.11"
   warnings:
-    version: "4.50"
+    version: "4.51"
     manage_config: true
     config_filename: "hudson.plugins.warnings.WarningsPublisher.xml"
     config_content: |
@@ -507,4 +513,5 @@ jenkins::plugin_hash:
           </hudson.plugins.warnings.GroovyParser>
         </groovyParsers>
       </hudson.plugins.warnings.WarningsDescriptor>
-
+  workflow-step-api:
+    version: 1.12
